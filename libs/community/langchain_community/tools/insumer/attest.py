@@ -38,7 +38,8 @@ class InsumerAttestSchema(BaseModel):
         description=(
             'JSON array of conditions. Each condition: {"type": "token_balance", '
             '"nft_ownership", or "eas_attestation", "contractAddress": "0x...", '
-            '"chainId": 1, "threshold": 1000, "decimals": 6, "label": "..."}. '
+            '"chainId": 1, "threshold": "1000", "decimals": 6, "label": "..."}. '
+            'threshold is a decimal string in token units (e.g. "1000", not 1000). '
             "For EAS attestations, use type \"eas_attestation\" with either "
             '"template": "coinbase_verified_account" (or coinbase_verified_country, '
             'coinbase_one) or raw "schemaId". No contractAddress/threshold needed. '

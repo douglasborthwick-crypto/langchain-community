@@ -67,7 +67,9 @@ class InsumerAPIWrapper(BaseModel):
 
         Args:
             conditions: Condition dicts with type, contractAddress, chainId,
-                threshold, decimals, and label fields. For EAS attestations,
+                threshold, decimals, and label fields. Pass threshold as a
+                decimal string (e.g. "1000", not 1000); keys minted today
+                reject a JSON number with 400. For EAS attestations,
                 use type "eas_attestation" with template or schemaId.
             wallet: EVM wallet address (0x...).
             solana_wallet: Solana wallet address (base58).
